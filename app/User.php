@@ -36,11 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Each user can have many posts
     public function posts()
     {
         return $this->hasMany(Post::class);
     }
 
+    // Each user can publish many posts
     public function publish()
     {
         return $this->belongsToMany(Post::class)->withTimestamps();

@@ -20,7 +20,7 @@ class PostsController extends Controller
     public function create()
     {
 
-        // Check if user have logged in
+        // Check if user have logged in (need to simplify)
         if (auth()->user()) {
             return view('posts.create');
         } else {

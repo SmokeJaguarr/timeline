@@ -9,57 +9,42 @@
 
 ## Timeline application
 
-
 Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database.
 
 ## Functionality
-- Each user can publish their created post and it will apear in public timeline together with other users published posts
-- Created Laravel Auth system
-- User can Create/Edit/Delete/Publish/View their own posts
-- When post is created it will be possible to see it at Myposts ('/myposts') route. (Available only if user is Logged in) There user can see his own posts and there is option to view detailed view/edit/delete
-- When selecting detailed view it is possible to publish the posts. When clicking on "Publish" button will change its colour to green and name to Published. (Vue.js is used)
-- When post is published it will appear at Timeline ('/') route together with other user posts. Posts are ordered ASC by publishing date
-- In ('/') route "Add Post" and "My Posts" buttons will apear only if user have loged in (Manage by PostPolicy)
-Also it is possible to edit/delete
-- There is option to search published posts by users e-mail. Made with simple form Post method
+
+-   Each user can publish their created post and it will apear in public timeline together with other users published posts
+-   Created Laravel Auth system
+-   User can Create/Edit/Delete/Publish/View their own posts
+-   When post is created it will be possible to see it at Myposts ('/myposts') route. (Available only if user is Logged in) There user can see his own posts and there is option to view detailed view/edit/delete
+-   When selecting detailed view it is possible to publish the posts. When clicking on "Publish" button will change its colour to green and name to Published. (Vue.js is used)
+-   When post is published it will appear at Timeline ('/') route together with other user posts. Posts are ordered ASC by publishing date
+-   In ('/') route "Add Post" and "My Posts" buttons will apear only if user have loged in (Manage by PostPolicy)
+    Also it is possible to edit/delete
+-   There is option to search published posts by users e-mail. Made with simple form Post method
+
+## Models
+
+-   Project contains two models User and Post model.
+-   User model is responsible to determen who is owner of posts or who have published post
+-   Post model operates with post detailed data and published posts
+
+## Controllers
+
+-   In project is used three main Controllers - MyPostsController, PostsController, PublishController
+-   MyPostsController deals only with '/myposts' index view
+-   PostsController handles most of Timelines Application logic. Through this controller we create/edit/show/delete... Posts
+-   Publish Controller is used to toggle in database if post is published.
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## External Resources used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   For timeline was used "mylastof" Simple Vertical timeline snipper - https://bootsnipp.com/snippets/xrKXW
+-   For my posts table with nice show/edit/delete icons was used "cristina" Bootstrap4 Table with Buttons - https://codepen.io/cristinaconacel/pen/dgxqxj
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ManyToMany relationship
 
-## Laravel Sponsors
+-   For expermental purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Project done by Davis
