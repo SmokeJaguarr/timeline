@@ -29,7 +29,7 @@ Application is built on top of Laravel Framework. In this application users can 
 7. We are ready just start the server
    `php artisan serve`
 
-## Used technologies
+## Technologies Used
 
 -   PHP 7
 -   MySQL
@@ -64,12 +64,12 @@ Application is built on top of Laravel Framework. In this application users can 
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## External Resources used
+## External Resources Used
 
 -   For timeline was used "mylastof" Simple Vertical timeline snipper - https://bootsnipp.com/snippets/xrKXW
 -   For myposts table with nice show/edit/delete icons was used "cristina" Bootstrap4 Table with Buttons - https://codepen.io/cristinaconacel/pen/dgxqxj
 
-## ManyToMany relationship
+## ManyToMany Relationship
 
 -   For training purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
 
