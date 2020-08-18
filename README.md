@@ -11,6 +11,24 @@
 
 Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database(Tested on MySQL).
 
+## Project Setup
+
+1. Clone the project
+    # git clone https://github.com/SmokeJaguarr/timeline.git
+2. Lets install all necessary Composer Dependencies - cmd write (make sure you are in project directory)
+    # composer install
+3. Lets install all necessary NPM Dependecies - in cmd write (make sure you are in project directory)
+    # npm install
+4. Create .env file (there is .env.example).
+   Create an empty database for our applicatiom and add database name to .env file
+   In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD
+5. Lets generate Laravel encryption key (make sure you are in project directory)
+    # php artisan key:generate
+6. Migrate the Database
+    # php artisan migrate
+7. We are ready just start the server
+    # php artisan serve
+
 ## Functionality
 
 -   Each user can publish their created post and it will apear in public timeline together with other users published posts
@@ -47,4 +65,11 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 -   For expermental purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
 
-Project done by Davis
+## Used technologies
+
+-   PHP 7
+-   MySQL
+-   Bootstramp
+-   Vue.js
+
+////// Project done by Davis \\\\\\
