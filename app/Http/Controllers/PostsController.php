@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Post;
+use App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 
 
@@ -18,11 +19,19 @@ class PostsController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+
+        // Check if user have logged in
+        if (auth()->user()) {
+            return view('posts.create');
+        } else {
+            return redirect('/login');
+        }
     }
 
     public function store(Post $post)
     {
+
+
         // Validate data
         $data = request()->validate([
             'title' => ['required', 'max:255'],
