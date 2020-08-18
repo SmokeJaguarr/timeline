@@ -9,7 +9,7 @@
 
 ## Timeline application
 
-Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database.
+Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database(Tested on MySQL).
 
 ## Functionality
 
