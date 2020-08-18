@@ -14,20 +14,20 @@ Application is built on top of Laravel Framework. In this application users can 
 ## Project Setup
 
 1. Clone the project
-    # git clone https://github.com/SmokeJaguarr/timeline.git
+   `git clone https://github.com/SmokeJaguarr/timeline.git`
 2. Lets install all necessary Composer Dependencies - cmd write (make sure you are in project directory)
-    # composer install
+   `composer install`
 3. Lets install all necessary NPM Dependecies - in cmd write (make sure you are in project directory)
-    # npm install
+   `npm install`
 4. Create .env file (there is .env.example).
    Create an empty database for our applicatiom and add database name to .env file
    In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD
 5. Lets generate Laravel encryption key (make sure you are in project directory)
-    # php artisan key:generate
+   `php artisan key:generate`
 6. Migrate the Database
-    # php artisan migrate
+   `php artisan migrate`
 7. We are ready just start the server
-    # php artisan serve
+   `php artisan serve`
 
 ## Functionality
 
