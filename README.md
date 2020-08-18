@@ -29,6 +29,13 @@ Application is built on top of Laravel Framework. In this application users can 
 7. We are ready just start the server
    `php artisan serve`
 
+## Used technologies
+
+-   PHP 7
+-   MySQL
+-   Bootstramp
+-   Vue.js
+
 ## Functionality
 
 -   Each user can publish their created post and it will apear in public timeline together with other users published posts
@@ -65,12 +72,5 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## ManyToMany relationship
 
 -   For training purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
-
-## Used technologies
-
--   PHP 7
--   MySQL
--   Bootstramp
--   Vue.js
 
 ////// Project done by Davis \\\\\\
