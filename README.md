@@ -33,6 +33,7 @@ Application is built on top of Laravel Framework. In this application users can 
 
 -   Each user can publish their created post and it will apear in public timeline together with other users published posts
 -   Created Laravel Auth system
+-   Elequent Database structure with 3 tables - users, posts, post_user
 -   User can Create/Edit/Delete/Publish/View their own posts
 -   When post is created it will be possible to see it at Myposts ('/myposts') route. (Available only if user is Logged in) There user can see his own posts and there is option to view detailed view/edit/delete
 -   When selecting detailed view it is possible to publish the posts. When clicking on "Publish" button will change its colour to green and name to Published. (Vue.js is used)
