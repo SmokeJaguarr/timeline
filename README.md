@@ -9,7 +9,7 @@
 
 ## Timeline application
 
-Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database(Tested on MySQL).
+Application is built on top of Laravel Framework. In this application users can make a posts which are stored in database (Tested on MySQL).
 
 ## Project Setup
 
@@ -63,7 +63,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## ManyToMany relationship
 
--   For expermental purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
+-   For training purpouse I used ManyToMany relationship between post and user to determin whether post is published or not. (pivot table was created)
 
 ## Used technologies
 
