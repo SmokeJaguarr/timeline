@@ -1937,6 +1937,9 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     buttonText: function buttonText() {
       return this.status ? "Published" : "Publish";
+    },
+    buttonColor: function buttonColor() {
+      return this.status ? "btn btn-outline-success" : "btn btn-outline-primary";
     }
   }
 });
@@ -37529,7 +37532,7 @@ var render = function() {
     _c(
       "button",
       {
-        staticClass: "btn btn-primary",
+        class: _vm.buttonColor,
         domProps: { textContent: _vm._s(_vm.buttonText) },
         on: { click: _vm.postToTimeline }
       },

@@ -45,10 +45,10 @@
 
 
                     <select id="type" name="type" class="form-control">
-                        <option>{{ old('type') ?? $post->type }}</option>
-                        <option>News</option>
-                        <option>Article</option>
-                        <option>Press-release</option>
+
+                        <option value="News" {{ $post->type == "News" ? 'selected' : '' }}>News</option>
+                        <option value="Article" {{ $post->type == "Article" ? 'selected' : '' }}>Article</option>
+                        <option value="Press-release" {{ $post->type == "Press-release" ? 'selected' : '' }}>Press-release</option>
                     </select>
                     @error('type')
                     <span class="invalid-feedback" role="alert">

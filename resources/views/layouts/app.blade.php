@@ -118,14 +118,6 @@
         h4 {
             margin: 2rem 0rem 1rem;
         }
-
-        .table-image {
-
-            td,
-            th {
-                vertical-align: middle;
-            }
-        }
     </style>
 </head>
 

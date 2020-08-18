@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn btn-primary" @click="postToTimeline" v-text="buttonText">Publish</button>
+    <button v-bind:class="buttonColor" @click="postToTimeline" v-text="buttonText">Publish</button>
   </div>
 </template>
 
@@ -29,6 +29,11 @@ export default {
   computed: {
     buttonText() {
       return this.status ? "Published" : "Publish";
+    },
+    buttonColor() {
+      return this.status
+        ? "btn btn-outline-success"
+        : "btn btn-outline-primary";
     },
   },
 };

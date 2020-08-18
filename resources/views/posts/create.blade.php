@@ -37,15 +37,21 @@
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">Type</label>
-                    <select id="type" name="type" class="form-control">
+
+
+                    <label for="description" class="col-md-4 col-form-label">Type</label>
+                    <select id="type" name="type" class="form-control @error('type') is-invalid @enderror" name="type" required autocomplete="type">
                         <option>News</option>
                         <option>Article</option>
                         <option>Press-release</option>
                     </select>
+                    @error('type')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
+
 
 
 

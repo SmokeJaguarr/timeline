@@ -23,12 +23,13 @@ class PostsController extends Controller
 
     public function store(Post $post)
     {
+        // Validate data
         $data = request()->validate([
             'title' => ['required', 'max:255'],
-            'description' => ['required', 'max:255'],
-            'type' => ['required', 'max:255'],
+            'description' => ['required', 'max:1000'],
+            'type' => ['in:News,Article,Press-release'],
         ]);
-        // This adds to database logged in user id / post() function hasMany relationshit with Post::class
+        // Pass in to database only validated data
         auth()->user()->posts()->create($data);
 
 
@@ -73,14 +74,16 @@ class PostsController extends Controller
         // PostPolicy - Users can update only their own posts
         $this->authorize('update', $post);
 
+        // Validate data
         $data = request()->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'title' => ['required', 'max:255'],
+            'description' => ['required', 'max:1000'],
             'type' => ['in:News,Article,Press-release'],
         ]);
 
         // Check if it is authenticated users post
         if (auth()->user() == $post->user) {
+            // Pass in database only validated data
             $post->update($data);
         }
 

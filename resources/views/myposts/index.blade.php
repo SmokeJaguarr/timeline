@@ -6,6 +6,7 @@
 
 
 <div class="container">
+    <div class="d-flex flex-row-reverse pb-2"><a href='/'><button type="button" class="btn btn-outline-primary">To Timeline</button></a></div>
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered">
