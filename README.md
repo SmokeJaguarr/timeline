@@ -60,7 +60,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## External Resources used
 
 -   For timeline was used "mylastof" Simple Vertical timeline snipper - https://bootsnipp.com/snippets/xrKXW
--   For my posts table with nice show/edit/delete icons was used "cristina" Bootstrap4 Table with Buttons - https://codepen.io/cristinaconacel/pen/dgxqxj
+-   For myposts table with nice show/edit/delete icons was used "cristina" Bootstrap4 Table with Buttons - https://codepen.io/cristinaconacel/pen/dgxqxj
 
 ## ManyToMany relationship
 
